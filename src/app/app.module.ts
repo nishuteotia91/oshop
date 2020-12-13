@@ -3,6 +3,7 @@ import { CategoryService } from './category.service';
 import { UserService } from './user.service';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
+import { ProductService } from './product.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -25,6 +26,7 @@ import { LoginComponent } from './login/login.component'
 import {RouterModule} from '@angular/router';
 import { from } from 'rxjs';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    FormsModule
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
 AuthService,
 AuthGuard,
 UserService,
-CategoryService
+CategoryService,
+ProductService
 //AdminAuthGuard
 ],
 

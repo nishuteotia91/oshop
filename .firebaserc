@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "oshop-f401a"
+  },
+  "targets": {
+    "oshop-f401a": {
+      "hosting": {
+        "oshop": [
+          "oshop-f401a"
+        ]
+      }
+    }
   }
 }
