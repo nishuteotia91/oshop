@@ -6,6 +6,8 @@ import { AuthService } from './auth.service';
 import { ProductService } from './product.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import {CustomFormsModule} from 'ng2-validation'
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +28,7 @@ import { LoginComponent } from './login/login.component'
 import {RouterModule} from '@angular/router';
 import { from } from 'rxjs';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
-import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,12 +42,13 @@ import { FormsModule } from '@angular/forms';
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
-    ProductFormComponent,
-    FormsModule
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    CustomFormsModule,
     //NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
